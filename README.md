@@ -11,7 +11,7 @@ How to use fanyi:
 5. Change the languages you want to translate from and translate into.
 6. Fill your google cloud translation API key.
    Here is quick start how to get your API key if you don't have one at https://cloud.google.com/translate/docs/quickstart
-7. RUN the modified .rmd. You can choose to 'Knit to PDF' 
+7. RUN the modified .rmd. You can choose to 'Knit to PDF' to produce a PDF if you like, the other options are word and html. 
 
 Voilà
    
