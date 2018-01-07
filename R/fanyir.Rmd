@@ -1,0 +1,46 @@
+---
+title: "Deutsch Konjunctionen Worts"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(xlsx)
+#library(translateR)
+library(translate)
+```
+
+
+## Konjunktionen (a):
+
+Stazbau nach Konjunktion:
+Konkunktion (Postition 0) + Subjekt + Konjugiertes Verb + ... (der Satzbau bleibt ganz 'normal')
+```{r}
+dw <- read.xlsx("Deutschworts.xlsx", sheetIndex = 1) # Read a .xlsx contains words in a column you want to translate, in this case its a column call"Deutschworts.xlsx" has a column "Konjunkt_a" to be translated
+dw$Konjunkt_a <- as.character(dw$Konjunkt_a)
+
+```
+
+```{r}
+set.key('your.google.api.key') # add your google cloud translation API key
+get.key()
+for (i in 1:length(dw$Konjunkt_a)){
+newword <- translate(dw[i,1], 'de', 'en', key = get.key())
+dw$translateda[i] <- newword
+}
+print(dw)
+
+```
+
+
+
+
+
+
