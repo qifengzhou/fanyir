@@ -1,6 +1,6 @@
 # fanyir
 
-fanyir is using the R package 'translate', traslate words or text from German to English. The translated results will be appended as a new column.
+fanyir is using the R package 'translate', traslate words or text from German to English. The translated results will be appended to the input dataframe as a new column.
 
 How to use fanyi:
 1. Down this .rmd file to a location. 
